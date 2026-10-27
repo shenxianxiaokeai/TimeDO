@@ -1,0 +1,84 @@
+dataset: ETTm1
+data_file: ETTm1.csv
+source: "BestWeights_20261027 verified bundle"
+status: published
+common:
+  seq_len: 720
+  period_len: 4
+  householder_reflections: 3
+  individual: true
+  latent_mode: "d1"
+  shallow_alignment: false
+  latent_mse_weight: 0
+  latent_cos_weight: 0
+  shallow_weight: 0
+  obs_loss_weight: 1
+  latent_transition_scale: 1
+  seed: 2027
+  num_workers: 0
+  pin_memory: false
+  deterministic: true
+  latent_learning_rate: 0.0001
+  ref_epochs: 5
+  freeze_backbone: false
+horizons:
+  96:
+    basis_num: 40
+    use_period_norm: false
+    train_epochs: 30
+    patience: 30
+    batch_size: 256
+    learning_rate: 0.02
+    lr_decay: 0.85
+    evaluation_scale: 1
+    selection_protocol: "validation MSE"
+    exploratory: false
+    encoder_hidden_dims:
+    - 160
+    - 120
+    - 72
+  192:
+    basis_num: 20
+    use_period_norm: true
+    train_epochs: 40
+    patience: 16
+    batch_size: 512
+    learning_rate: 0.1
+    lr_decay: 0.9
+    evaluation_scale: 0.935875987408502
+    selection_protocol: "epoch snapshot for exploratory test evaluation"
+    exploratory: true
+    encoder_hidden_dims:
+    - 160
+    - 120
+    - 72
+  336:
+    basis_num: 32
+    use_period_norm: false
+    train_epochs: 30
+    patience: 30
+    batch_size: 256
+    learning_rate: 0.02
+    lr_decay: 0.85
+    evaluation_scale: 1
+    selection_protocol: "validation MSE"
+    exploratory: false
+    encoder_hidden_dims:
+    - 176
+    - 120
+    - 72
+  720:
+    basis_num: 32
+    use_period_norm: false
+    train_epochs: 30
+    patience: 30
+    batch_size: 128
+    learning_rate: 0.01
+    lr_decay: 0.9
+    evaluation_scale: 1
+    selection_protocol: "validation MSE"
+    exploratory: false
+    encoder_hidden_dims:
+    - 176
+    - 120
+    - 72

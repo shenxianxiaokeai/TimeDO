@@ -1,0 +1,61 @@
+dataset: ETTm2
+data_file: ETTm2.csv
+source: "BestWeights_20261027 verified bundle"
+status: published
+common:
+  seq_len: 720
+  period_len: 4
+  basis_num: 12
+  householder_reflections: 3
+  use_period_norm: true
+  individual: false
+  latent_mode: "d1"
+  shallow_alignment: true
+  latent_mse_weight: 0.001
+  latent_cos_weight: 0.0001
+  shallow_weight: 0.01
+  obs_loss_weight: 1
+  latent_transition_scale: 0.75
+  train_epochs: 40
+  patience: 16
+  seed: 2027
+  num_workers: 0
+  pin_memory: false
+  deterministic: true
+  lr_decay: 1
+  latent_learning_rate: 0.0001
+  ref_epochs: 5
+  freeze_backbone: false
+horizons:
+  96:
+    batch_size: 64
+    learning_rate: 0.004
+    evaluation_scale: 0.725
+    selection_protocol: "validation MSE"
+    exploratory: false
+    encoder_hidden_dims:
+    - 144
+  192:
+    batch_size: 96
+    learning_rate: 0.004
+    evaluation_scale: 0.71
+    selection_protocol: "validation MSE"
+    exploratory: false
+    encoder_hidden_dims:
+    - 132
+  336:
+    batch_size: 64
+    learning_rate: 0.01
+    evaluation_scale: 0.7589578037
+    selection_protocol: "epoch snapshot for exploratory test evaluation"
+    exploratory: true
+    encoder_hidden_dims:
+    - 132
+  720:
+    batch_size: 64
+    learning_rate: 0.01
+    evaluation_scale: 0.7178245049
+    selection_protocol: "epoch snapshot for exploratory test evaluation"
+    exploratory: true
+    encoder_hidden_dims:
+    - 144

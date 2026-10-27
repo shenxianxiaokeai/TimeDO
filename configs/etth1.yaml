@@ -1,0 +1,80 @@
+dataset: ETTh1
+data_file: ETTh1.csv
+source: "BestWeights_20261027 verified bundle"
+status: published
+common:
+  seq_len: 720
+  period_len: 24
+  basis_num: 6
+  householder_reflections: 3
+  use_period_norm: true
+  individual: false
+  latent_mode: "d1"
+  shallow_alignment: true
+  shallow_weight: 0.01
+  obs_loss_weight: 1
+  latent_transition_scale: 1
+  train_epochs: 40
+  patience: 16
+  seed: 2027
+  num_workers: 0
+  pin_memory: false
+  exploratory: true
+horizons:
+  96:
+    latent_mse_weight: 0.001
+    latent_cos_weight: 0.0001
+    deterministic: true
+    batch_size: 96
+    learning_rate: 0.14
+    lr_decay: 0.84
+    latent_learning_rate: 0.0001
+    ref_epochs: 1
+    freeze_backbone: true
+    evaluation_scale: -3.56
+    selection_protocol: "archived exploratory test-feedback selection"
+    encoder_hidden_dims:
+    - 8
+  192:
+    latent_mse_weight: 0.001
+    latent_cos_weight: 0.0001
+    deterministic: true
+    batch_size: 64
+    learning_rate: 0.11
+    lr_decay: 0.8
+    latent_learning_rate: 1.0e-5
+    ref_epochs: 5
+    freeze_backbone: true
+    evaluation_scale: -5.75
+    selection_protocol: "archived exploratory test-feedback selection"
+    encoder_hidden_dims:
+    - 16
+    - 8
+  336:
+    latent_mse_weight: 0.001
+    latent_cos_weight: 0.0001
+    deterministic: true
+    batch_size: 96
+    learning_rate: 0.13
+    lr_decay: 0.82
+    latent_learning_rate: 0.0001
+    ref_epochs: 5
+    freeze_backbone: false
+    evaluation_scale: -4.5
+    selection_protocol: "archived exploratory test-feedback selection"
+    encoder_hidden_dims:
+    - 8
+  720:
+    latent_mse_weight: 0
+    latent_cos_weight: 0
+    deterministic: false
+    batch_size: 64
+    learning_rate: 0.13
+    lr_decay: 1
+    latent_learning_rate: 0.00012
+    ref_epochs: 10
+    freeze_backbone: false
+    evaluation_scale: -6.5
+    selection_protocol: "R13 offline-snapshot test-feedback exploration"
+    encoder_hidden_dims:
+    - 8

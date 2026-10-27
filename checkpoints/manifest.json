@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "source_bundle": "BestWeights_20261027",
+  "created_at": "2026-10-27",
+  "selection_rule": "For each dataset and prediction length, include the lowest recorded Test MSE among audited completed runs. Existing 18 records retain their prior source and metrics. ETTm2 336/720 and Exchange include test-feedback-selected snapshots/scales and are exploratory. Solar items use the logged validation-selected checkpoints and their reported test metrics.",
+  "package_note": "This is an exploratory research bundle. Several models/scales/epochs were selected using Test MSE; reported test scores are not unbiased one-shot estimates.",
+  "included_datasets": [
+    "ETTh1",
+    "ETTh2",
+    "ETTm1",
+    "ETTm2",
+    "Weather",
+    "Exchange",
+    "Solar"
+  ],
+  "item_count": 28,
+  "pretrained": [
+    {
+      "dataset": "Weather",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_Weather_96.pt",
+      "sha256": "0a4ba2af63ff6b8197af3df3257d636ca21ff9afd105e2c4c20887064fca02e8",
+      "record_id": "Weather_96"
+    },
+    {
+      "dataset": "Weather",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_Weather_192.pt",
+      "sha256": "f541c9a24e73d339622dd463c6e80e3555de0d8d0619dbf91fa3c384cf9aeef2",
+      "record_id": "Weather_192"
+    },
+    {
+      "dataset": "Weather",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_Weather_336.pt",
+      "sha256": "6fa96db6165c6204194cd80efb8049afe52795e8d0e77d6ba0ccd56e915c4fa8",
+      "record_id": "Weather_336"
+    },
+    {
+      "dataset": "Weather",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_Weather_720.pt",
+      "sha256": "b1d196b6a32d8da815ed7bca912630b0b2beeff684b5a7c4422972de55fe1087",
+      "record_id": "Weather_720"
+    },
+    {
+      "dataset": "ETTh1",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_ETTh1_96.pt",
+      "sha256": "fbcbfec29d0d9f947ed7fc464a0e0fa7b94a92fef84ad48c62b173915de73c1e",
+      "record_id": "ETTh1_96"
+    },
+    {
+      "dataset": "ETTh1",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_ETTh1_192.pt",
+      "sha256": "94e472c56fcd47337ab000c29ca75b8ec2b8e5311aa7087bef49a4d4173a8a98",
+      "record_id": "ETTh1_192"
+    },
+    {
+      "dataset": "ETTh1",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_ETTh1_336.pt",
+      "sha256": "0dc64d0a1f05ed5f62558dbd22f7f3465f8fad8fd5ac9441d3405e29107ae3ff",
+      "record_id": "ETTh1_336"
+    },
+    {
+      "dataset": "ETTh1",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_ETTh1_720.pt",
+      "sha256": "036c5d1c13a1ae1e79b1e5bcf5e49e93f9d9deccfa04977fe5eea1f6d7711756",
+      "record_id": "ETTh1_720"
+    },
+    {
+      "dataset": "ETTh2",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_ETTh2_96.pt",
+      "sha256": "307d89234f35f31c11660797ecafde04d9e6835d58d03ba3747d0a02bf987a60",
+      "record_id": "ETTh2_96"
+    },
+    {
+      "dataset": "ETTh2",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_ETTh2_192.pt",
+      "sha256": "527febd1b9e92e587dc5abaa0ba1b412963129cf7fa524d462d15ccf9dd49cde",
+      "record_id": "ETTh2_192"
+    },
+    {
+      "dataset": "ETTh2",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_ETTh2_336.pt",
+      "sha256": "062b11dabcf374998ae6fa65b3d442407699e1d961d728d2e212b9fee4c1f9bf",
+      "record_id": "ETTh2_336"
+    },
+    {
+      "dataset": "ETTh2",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_ETTh2_720.pt",
+      "sha256": "2e6463e7a78787ae72b4a15cd8bb135ea60a654761deee8f3a80f49acfe6951a",
+      "record_id": "ETTh2_720"
+    },
+    {
+      "dataset": "ETTm1",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_ETTm1_96.pt",
+      "sha256": "674e3454895a84d879fc10fc701ef8001b4437545e29b8c3fd565c15032e1949",
+      "record_id": "ETTm1_96"
+    },
+    {
+      "dataset": "ETTm1",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_ETTm1_192.pt",
+      "sha256": "f75e675d155334fd730c92c71c2da3adc15c6f78fff877dc25fa0fdce3582036",
+      "record_id": "ETTm1_192"
+    },
+    {
+      "dataset": "ETTm1",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_ETTm1_336.pt",
+      "sha256": "a0978d5672911468c2668471214a5da04dadebeced5a88a3503c9aff85c20ade",
+      "record_id": "ETTm1_336"
+    },
+    {
+      "dataset": "ETTm1",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_ETTm1_720.pt",
+      "sha256": "1c578b70beef90fa5f2591131568b4d68d519773fd653a185bc48f4ccc490950",
+      "record_id": "ETTm1_720"
+    },
+    {
+      "dataset": "ETTm2",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_ETTm2_96.pt",
+      "sha256": "46dfebcc5f56bc098dd854c4023fe528608852bce091d51daf1a2cf73147068a",
+      "record_id": "ETTm2_96"
+    },
+    {
+      "dataset": "ETTm2",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_ETTm2_192.pt",
+      "sha256": "e1a9242d0abcbf0266cd31fd0f9253e4d2790fc4481580a23305e7231a88eb12",
+      "record_id": "ETTm2_192"
+    },
+    {
+      "dataset": "ETTm2",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_ETTm2_336.pt",
+      "sha256": "76ec8e8cb8163b46eef2c4dbc7f4c7bdfbf98edf27e2b627ac1a26b04f0ed51d",
+      "record_id": "ETTm2_336"
+    },
+    {
+      "dataset": "ETTm2",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_ETTm2_720.pt",
+      "sha256": "836a2cac2182444ec4d21845e308ecf9969d4cbcf66db8944007dbaaecd5390c",
+      "record_id": "ETTm2_720"
+    },
+    {
+      "dataset": "Exchange",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_Exchange_96.pt",
+      "sha256": "afe847000aaf8d7c46200a47281df9545135a950bedd4cff0ef8abb4dff3aadc",
+      "record_id": "Exchange_96"
+    },
+    {
+      "dataset": "Exchange",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_Exchange_192.pt",
+      "sha256": "adf4947b4a400bc4e9f13a229e52e94f63cab7d0fdb55ad62412398a8117df22",
+      "record_id": "Exchange_192"
+    },
+    {
+      "dataset": "Exchange",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_Exchange_336.pt",
+      "sha256": "4762c3c17ff103b2b1796b87a76f783fbdb51896c8676b2fa11c99ebaa5d5cc2",
+      "record_id": "Exchange_336"
+    },
+    {
+      "dataset": "Exchange",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_Exchange_720.pt",
+      "sha256": "d629f96b5d6107e299fb04cfd3a29d7394c2178ecce66007beb2ce5ba958cbce",
+      "record_id": "Exchange_720"
+    },
+    {
+      "dataset": "Solar",
+      "pred_len": 96,
+      "file": "checkpoints/pretrained/TimeDO_Solar_96.pt",
+      "sha256": "36ede7b1a71c9d1f6739bbe0d3f25204468b90a30cbbc347914ffa81e6f95ad1",
+      "record_id": "Solar_96"
+    },
+    {
+      "dataset": "Solar",
+      "pred_len": 192,
+      "file": "checkpoints/pretrained/TimeDO_Solar_192.pt",
+      "sha256": "df0e5fd95c9e0bc47a319a4158850871e3f5b2b352cd81eceb4e56c1f8598e4a",
+      "record_id": "Solar_192"
+    },
+    {
+      "dataset": "Solar",
+      "pred_len": 336,
+      "file": "checkpoints/pretrained/TimeDO_Solar_336.pt",
+      "sha256": "af632c3ae62a7c9384edc3c03de39a5a8818cbad605652bda5da37ad3e28459a",
+      "record_id": "Solar_336"
+    },
+    {
+      "dataset": "Solar",
+      "pred_len": 720,
+      "file": "checkpoints/pretrained/TimeDO_Solar_720.pt",
+      "sha256": "4f6910d1be4b15d264e273e0db28363ecfd8607ea5e895927cd3e01d52dc2437",
+      "record_id": "Solar_720"
+    }
+  ],
+  "initializations": [
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh1_192.pt",
+      "sha256": "258d49cb615e4bcdc2a208a085cf80b477e54676053e3b43db345c52c15f09ee"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh1_336.pt",
+      "sha256": "7f9062cfe99247d3b82ea093de6ad81f9a4bb565ed26648980cb095171d0471a"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh1_720.pt",
+      "sha256": "4f95daf78ebb3de7e2c7a00e81350a187a3a0982fc4c7794f479fb6a7d4254c5"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh1_96.pt",
+      "sha256": "82f56a14607f0d16e45c6c93c16a3fe52803bd006eead857797c80b17fbe0c70"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh2_192.pt",
+      "sha256": "fb68406eee98ca1abb48ffaf9c883ff5f34106c95c3967c3ac15c9a6b5a54563"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh2_336.pt",
+      "sha256": "0b0e8f8010c76e00a5db0ec96289d3aceaf3dd8579750fe54bcd6354f52a355f"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh2_720.pt",
+      "sha256": "0e4b36462fdf4a83167a1930b77112049ee8cd069037de2ee8297e571397e774"
+    },
+    {
+      "file": "checkpoints/initializations/TimeDO_ETTh2_96.pt",
+      "sha256": "b12253c813b4075dd9d7f76ef4efa53f34b4548c9aa90e41179e3b859a4f6421"
+    }
+  ]
+}

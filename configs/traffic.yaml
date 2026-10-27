@@ -1,0 +1,67 @@
+dataset: Traffic
+data_file: traffic.csv
+source: TimeBase script hyperparameters + provisional TimeDO architecture; not trained
+status: provisional
+common:
+  seq_len: 720
+  period_len: 24
+  basis_num: 6
+  householder_reflections: 3
+  use_period_norm: true
+  latent_mode: d1
+  shallow_alignment: true
+  latent_mse_weight: 0.001
+  latent_cos_weight: 0.0001
+  shallow_weight: 0.01
+  obs_loss_weight: 1.0
+  latent_transition_scale: 1.0
+  train_epochs: 30
+  patience: 5
+  seed: 2027
+  num_workers: 0
+  pin_memory: true
+  deterministic: false
+  individual: false
+  lr_decay: 1.0
+  encoder_hidden_dims:
+  - 16
+horizons:
+  96:
+    batch_size: 128
+    learning_rate: 0.05
+    latent_learning_rate: 0.0001
+    ref_epochs: 5
+    freeze_backbone: false
+    evaluation_scale: 1.0
+    encoder_hidden_dims:
+    - 24
+  192:
+    basis_num: 8
+    batch_size: 128
+    learning_rate: 0.03
+    latent_learning_rate: 0.0001
+    ref_epochs: 5
+    freeze_backbone: false
+    evaluation_scale: 1.0
+    encoder_hidden_dims:
+    - 24
+  336:
+    basis_num: 15
+    batch_size: 128
+    learning_rate: 0.03
+    latent_learning_rate: 0.0001
+    ref_epochs: 5
+    freeze_backbone: false
+    evaluation_scale: 1.0
+    encoder_hidden_dims:
+    - 24
+  720:
+    basis_num: 8
+    batch_size: 128
+    learning_rate: 0.03
+    latent_learning_rate: 0.0001
+    ref_epochs: 5
+    freeze_backbone: false
+    evaluation_scale: 1.0
+    encoder_hidden_dims:
+    - 24

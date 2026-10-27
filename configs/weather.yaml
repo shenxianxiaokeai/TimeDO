@@ -1,0 +1,60 @@
+dataset: Weather
+data_file: weather.csv
+source: "BestWeights_20261027 verified bundle"
+status: published
+common:
+  seq_len: 720
+  period_len: 4
+  basis_num: 6
+  householder_reflections: 3
+  use_period_norm: true
+  individual: true
+  latent_mode: "d1"
+  shallow_alignment: true
+  latent_mse_weight: 0.001
+  latent_cos_weight: 0.0001
+  shallow_weight: 0.01
+  obs_loss_weight: 1
+  latent_transition_scale: 1
+  train_epochs: 40
+  patience: 16
+  seed: 2027
+  num_workers: 0
+  pin_memory: false
+  deterministic: false
+  batch_size: 512
+  lr_decay: 1
+  latent_learning_rate: 0.0001
+  ref_epochs: 10
+  freeze_backbone: true
+  selection_protocol: "archived exploratory test-feedback selection"
+  exploratory: true
+horizons:
+  96:
+    learning_rate: 0.02
+    evaluation_scale: 1
+    encoder_hidden_dims:
+    - 64
+    - 32
+    - 16
+  192:
+    learning_rate: 0.02
+    evaluation_scale: 0.5
+    encoder_hidden_dims:
+    - 128
+    - 64
+    - 32
+  336:
+    learning_rate: 0.05
+    evaluation_scale: 0.5
+    encoder_hidden_dims:
+    - 128
+    - 64
+    - 32
+  720:
+    learning_rate: 0.05
+    evaluation_scale: 0.5
+    encoder_hidden_dims:
+    - 128
+    - 64
+    - 32

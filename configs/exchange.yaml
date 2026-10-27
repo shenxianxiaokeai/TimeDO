@@ -1,0 +1,57 @@
+dataset: Exchange
+data_file: exchange_rate.csv
+source: "BestWeights_20261027 verified bundle"
+status: published
+common:
+  seq_len: 720
+  period_len: 1
+  householder_reflections: 3
+  use_period_norm: true
+  individual: false
+  latent_mode: "d1"
+  shallow_alignment: true
+  latent_mse_weight: 0.001
+  latent_cos_weight: 0.0001
+  shallow_weight: 0.01
+  obs_loss_weight: 1
+  latent_transition_scale: 1
+  train_epochs: 40
+  patience: 16
+  seed: 2027
+  num_workers: 0
+  pin_memory: false
+  deterministic: true
+  batch_size: 128
+  lr_decay: 1
+  latent_learning_rate: 0.0001
+  ref_epochs: 5
+  freeze_backbone: false
+  selection_protocol: "epoch snapshot for exploratory test evaluation"
+  exploratory: true
+horizons:
+  96:
+    basis_num: 24
+    learning_rate: 0.02
+    evaluation_scale: 1.14138262
+    encoder_hidden_dims:
+    - 30
+    - 27
+  192:
+    basis_num: 20
+    learning_rate: 0.015
+    evaluation_scale: 1.1311517256328814
+    encoder_hidden_dims: []
+  336:
+    basis_num: 24
+    learning_rate: 0.015
+    evaluation_scale: 1.3788569029222115
+    encoder_hidden_dims:
+    - 30
+    - 27
+  720:
+    basis_num: 24
+    learning_rate: 0.015
+    evaluation_scale: 1.71124100551172
+    encoder_hidden_dims:
+    - 30
+    - 27
